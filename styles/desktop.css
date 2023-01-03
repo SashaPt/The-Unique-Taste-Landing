@@ -30,6 +30,7 @@ a {
 }
 
 section {
+  width: 100vw;
   padding-bottom: 8.854vw;
   margin: 0 auto;
 }
