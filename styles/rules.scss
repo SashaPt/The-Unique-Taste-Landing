@@ -1,0 +1,62 @@
+@mixin menu-text($f-size, $l-height) {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: 400;
+    font-size: $f-size;
+    line-height: $l-height;
+  }
+  @mixin menu($f-size, $l-height, $gap) {
+    @include menu-text($f-size, $l-height);
+    display: flex;
+    gap: $gap;
+  }
+  @mixin title {
+    font-family: 'Bona Nova', serif;
+    font-weight: 700;
+  }
+  @mixin section-title($f-size, $l-height) {
+    @include title();
+    font-size: $f-size;
+    line-height: $l-height;
+  }
+  @mixin text($f-weight, $f-size, $l-height) {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: $f-weight;
+    font-size: $f-size;
+    line-height: $l-height;
+  }
+  @mixin button-container($width, $gap) {
+    width: $width;
+    display: flex;
+    gap: $gap;
+    position: relative;
+  }
+  @mixin button($height, $b-radius, $main-color, $add-color) {
+    height: $height;
+    border-radius: $b-radius;
+    background-color: $main-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    transition: 0.3s ease-out;
+    &:hover {
+      background-color: $add-color;
+    }
+    svg {
+      fill: $add-color;
+    }
+    &:hover svg {
+      fill: $main-color;
+    }
+  }
+  @mixin button-shadow($s-width, $s-height) {
+    width: $s-width;
+    height: $s-height;
+    border-radius: 140px;
+    background-color: rgba($color: $color_black, $alpha: 0.3);
+    filter: blur(70px);
+    position: absolute;
+    z-index: -1;
+  }
