@@ -50,7 +50,7 @@ h2 {
 
 /*   HEADER   */
 .header {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   z-index: 100;
   top: 0;
@@ -60,7 +60,6 @@ h2 {
   border-bottom: 0.052vw solid rgba($color: $color_white, $alpha: 0.3);
   .header__block {
     height: 4.167vw;
-     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;

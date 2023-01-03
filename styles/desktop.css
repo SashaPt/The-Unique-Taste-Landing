@@ -75,7 +75,7 @@ h2 {
 
 /*   HEADER   */
 .header {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   z-index: 100;
   top: 0;
@@ -86,7 +86,6 @@ h2 {
 }
 .header .header__block {
   height: 4.167vw;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;

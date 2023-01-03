@@ -370,7 +370,11 @@
             alt="woman-background"
             class="main__picture-background"
           />
-          <img
+          <picture>
+            <source srcset="media/img/woman-mobile.png  208w,
+            media/img/woman-average.png 328w,
+            media/img/woman.png         671w" sizes="(max-width: 375px) 208px, (max-width: 768px) 328px, 671px">
+            <img
             srcset="
               media/img/woman-mobile.png  208w,
               media/img/woman-average.png 328w,
@@ -381,6 +385,7 @@
             alt="woman"
             class="main__picture-image"
           />
+          </picture>
         </div>
         <div class="main__button-container">
           <div class="button-shadow"></div>
@@ -833,17 +838,26 @@
                 <div class="about-project__eclipse"></div>
               </div>
             </div>
-            <img
+            <picture>
+              <source srcset="
+              media/img/about-project-statue-mobile.png  310w,
+              media/img/about-project-statue-average.png 361w,
+              media/img/about-project-statue.png         459w
+            "
+            sizes="(max-width: 375px) 310px, (max-width: 768px) 361px, (min-width: 769px) 459px, 459px"
+            >
+              <img
               srcset="
                 media/img/about-project-statue-mobile.png  310w,
                 media/img/about-project-statue-average.png 361w,
                 media/img/about-project-statue.png         459w
               "
-              sizes="(max-width: 375px) 310px, (max-width: 768px) 361px, 459px"
+              sizes="(max-width: 375px) 310px, (max-width: 768px) 361px, (min-width: 769px) 459px, 459px"
               src="media/img/about-project-statue.png"
               alt="statue"
               class="about-project__statue-img"
-            />
+            /></picture>
+            
           </div>
           <div class="about-project__block">
             <h2 class="about-project__header">О проекте</h2>
@@ -1186,17 +1200,27 @@
         </div>
         <div class="mobile-app__picture">
           <div class="mobile-app__shadow"></div>
+          <picture>
+            <source srcset="
+            media/img/mob-mobile.png   683w,
+            media/img/mob-average.png  505w,
+            media/img/mob.png         1095w
+          "
+          sizes="(max-width: 375px) 683px, (max-width: 768px) 505px, 1095px"
+          >
           <img
             srcset="
-              media/img/mob-mobile.png   432w,
+              media/img/mob-mobile.png   683w,
               media/img/mob-average.png  505w,
               media/img/mob.png         1095w
             "
-            sizes="(max-width: 375px) 432px, (max-width: 768px) 505px, 1095px"
+            sizes="(max-width: 375px) 683px, (max-width: 768px) 505px, 1095px"
             src="media/img/mob.png"
             alt="mobile-phones"
             class="mobile-app__mobile-img"
           />
+          </picture>
+          
         </div>
       </div>
     </section>
