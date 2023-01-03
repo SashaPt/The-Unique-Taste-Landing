@@ -29,6 +29,7 @@ a {
 section {
   padding-bottom: 8.854vw;
   margin: 0 auto;
+  
 }
 h2 {
   @include section-title(4.688vw, 4.688vw);
@@ -58,6 +59,7 @@ h2 {
   border-bottom: 0.052vw solid rgba($color: $color_white, $alpha: 0.3);
   .header__block {
     height: 4.167vw;
+     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;

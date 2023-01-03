@@ -48,6 +48,9 @@ div.desktop {
     display: inline;
   }
   /*   HEADER   */
+  .header {
+    width: 100vw;
+  }
   .header .header__block {
     height: 10.417vw;
   }
