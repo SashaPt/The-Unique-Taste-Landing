@@ -38,6 +38,9 @@
         width: 5.208vw;
         display: block;
         cursor: pointer;
+        img {
+          width: 100%;
+        }
       }
       .header__nav-wrapper {
         position: fixed;
@@ -214,6 +217,9 @@
       height: 97.005vw;
       right: -19.531vw;
       border-radius: 0 0 3.906vw 3.906vw;
+      .main__picture-background {
+        width: 87.37vw;
+      }
       .main__picture-image {
         width: 42.708vw;
         right: 15.625vw;
@@ -646,6 +652,9 @@
           svg {
             width: 15.625vw;
             height: 4.036vw;
+          }
+          &:hover {
+            background-color: $color_olive;
           }
         }
       }

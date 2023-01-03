@@ -56,6 +56,9 @@ div.desktop {
     display: block;
     cursor: pointer;
   }
+  .header .header__block .burger img {
+    width: 100%;
+  }
   .header .header__block .header__nav-wrapper {
     position: fixed;
     top: 0;
@@ -252,6 +255,9 @@ div.desktop {
     height: 97.005vw;
     right: -19.531vw;
     border-radius: 0 0 3.906vw 3.906vw;
+  }
+  .main .main__picture .main__picture-background {
+    width: 87.37vw;
   }
   .main .main__picture .main__picture-image {
     width: 42.708vw;
@@ -813,6 +819,9 @@ div.desktop {
   .footer .footer__block .footer__button-container .button svg {
     width: 15.625vw;
     height: 4.036vw;
+  }
+  .footer .footer__block .footer__button-container .button:hover {
+    background-color: #969879;
   }
   .footer .footer__rights {
     font-family: "Hind Siliguri", sans-serif;

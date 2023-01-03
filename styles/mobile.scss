@@ -170,6 +170,9 @@
       width: 100vw;
       height: 128.533vw;
       right: -4vw;
+      .main__picture-background {
+        width: 100vw;
+      }
       .main__picture-image {
         width: 55.467vw;
         right: 0vw;
@@ -611,6 +614,9 @@
           svg {
             width: 23.669vw;
             height: 5.867vw;
+          }
+          &:hover {
+            background-color: $color_olive;
           }
         }
       }

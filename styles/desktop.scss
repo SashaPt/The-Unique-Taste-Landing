@@ -224,6 +224,7 @@ h2 {
     right: 0;
     background-color: $color_red;
     .main__picture-background {
+      width: 34.948vw;
       mix-blend-mode: darken;
       animation: 10s scaleBackground linear alternate infinite;
       animation-delay: 1ms;

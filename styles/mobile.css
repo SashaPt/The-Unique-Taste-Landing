@@ -209,6 +209,9 @@ h3.average {
     height: 128.533vw;
     right: -4vw;
   }
+  .main .main__picture .main__picture-background {
+    width: 100vw;
+  }
   .main .main__picture .main__picture-image {
     width: 55.467vw;
     right: 0vw;
@@ -744,6 +747,9 @@ h3.average {
   .footer .footer__block .footer__button-container .button svg {
     width: 23.669vw;
     height: 5.867vw;
+  }
+  .footer .footer__block .footer__button-container .button:hover {
+    background-color: #969879;
   }
   .footer .footer__rights {
     font-family: "Hind Siliguri", sans-serif;

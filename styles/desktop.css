@@ -271,6 +271,7 @@ h2 {
   background-color: #bc1d10;
 }
 .main .main__picture .main__picture-background {
+  width: 34.948vw;
   mix-blend-mode: darken;
   -webkit-animation: 10s scaleBackground linear alternate infinite;
           animation: 10s scaleBackground linear alternate infinite;
