@@ -7,6 +7,7 @@
   }
   section {
     padding-bottom: 19.531vw;
+    overflow-x: hidden;
   }
   h2 {
     font-family: "Bona Nova", serif;
@@ -41,11 +42,15 @@
   }
   br.desktop,
 span.desktop,
-div.desktop {
+div.desktop,
+img.desktop {
     display: none;
   }
   br.average {
     display: inline;
+  }
+  img.average {
+    display: block;
   }
   /*   HEADER   */
   .header {

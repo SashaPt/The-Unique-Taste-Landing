@@ -8,6 +8,7 @@
   }
   section {
     padding-bottom: 18.667vw;
+    overflow-x: hidden;
   }
   .button {
     height: 16vw;
@@ -37,11 +38,11 @@
   br.mobile {
     display: inline;
   }
-  h3.mobile {
+  h3.mobile, img.mobile {
     display: block;
   }
   br.average,
-h3.average {
+h3.average, img.average {
     display: none;
   }
   /*   HEADER   */
