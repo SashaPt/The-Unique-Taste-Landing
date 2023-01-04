@@ -2,17 +2,15 @@
 @import 'rules.scss';
 
 @media screen and (max-width: 375px) {
-  body {
-    width: 100vw;
+  body,
+  html {
     overflow-x: hidden;
   }
   .container {
     max-width: 92vw;
-    
   }
   section {
     padding-bottom: 18.667vw;
-    overflow-x: hidden;
   }
   .button {
     @include button(16vw, 4vw, $color_button-black, $color_white);
@@ -21,14 +19,18 @@
       height: 10.133vw;
     }
   }
+  .lang {
+    @include menu-text(4.8vw, 7.733vw);
+    @include lang(17.867vw, 7.2vw);
+  }
   br.mobile {
     display: inline;
   }
-  h3.mobile, img.mobile {
+  h3.mobile,
+  img.mobile {
     display: block;
   }
-  br.average,
-  h3.average, img.average {
+  .average {
     display: none;
   }
 
@@ -51,26 +53,7 @@
           padding: 5.867vw 4vw 0;
         }
         .lang {
-          @include menu-text(4.8vw, 7.733vw);
-          width: 17.867vw;
-          padding-left: 2.4vw;
-          padding-right: 2.133vw;
-          &:hover {
-            border-radius: 7.2vw;
-          }
-          .lang__block {
-            .lang-select {
-              width: 2.933vw;
-            }
-          }
-          .lang__options {
-            width: 17.867vw;
-            padding-left: 2.4vw;
-            padding-right: 2.133vw;
-            gap: -1.333vw;
-            left: -2.4vw;
-            border-radius: 2.667vw;
-          }
+          margin-top: 0;
         }
         .header__menu {
           @include menu(8vw, 13.067vw, 6.667vw);
@@ -95,7 +78,7 @@
         padding-left: 7.2vw;
       }
       .lang {
-        @include menu-text(4.8vw, 7.733vw);
+        @include menu-text(4.8vw, 7.2vw);
         width: 17.867vw;
         padding-left: 2.4vw;
         padding-right: 2.133vw;
@@ -112,6 +95,9 @@
           gap: -1.333vw;
           left: -2.4vw;
           border-radius: 2.667vw;
+          .lang-select {
+            width: 2.933vw;
+          }
         }
       }
     }

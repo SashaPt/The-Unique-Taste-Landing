@@ -1,13 +1,12 @@
 @media screen and (max-width: 768px) {
-  body {
-    width: 100vw;
+  body, html {
+    overflow-x: hidden;
   }
   .container {
     max-width: 92.188vw;
   }
   section {
     padding-bottom: 19.531vw;
-    overflow-x: hidden;
   }
   h2 {
     font-family: "Bona Nova", serif;
@@ -40,10 +39,21 @@
     width: 24.219vw;
     height: 6.25vw;
   }
-  br.desktop,
-span.desktop,
-div.desktop,
-img.desktop {
+  .lang {
+    font-family: "Hind Siliguri", sans-serif;
+    font-weight: 400;
+    font-size: 2.344vw;
+    line-height: 3.776vw;
+    width: 8.724vw;
+    align-self: flex-start;
+    position: relative;
+    transition: 0.3s ease-out;
+  }
+  .lang:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1.302vw;
+  }
+  .desktop {
     display: none;
   }
   br.average {
@@ -117,25 +127,7 @@ img.desktop {
   }
   .header .header__block .header__nav-bar .lang {
     display: block;
-    font-family: "Hind Siliguri", sans-serif;
-    font-weight: 400;
-    font-size: 2.344vw;
-    line-height: 3.776vw;
-    width: 8.724vw;
-    padding-left: 1.172vw;
-    padding-right: 1.042vw;
     margin-top: 0;
-  }
-  .header .header__block .header__nav-bar .lang .lang__block .lang-select {
-    width: 1.432vw;
-  }
-  .header .header__block .header__nav-bar .lang .lang__options {
-    width: 8.724vw;
-    padding-left: 1.172vw;
-    padding-right: 1.042vw;
-    gap: -0.651vw;
-    left: -1.172vw;
-    border-radius: 1.302vw;
   }
   .header .header__block .header__nav-bar .header__menu {
     font-family: "Hind Siliguri", sans-serif;
@@ -176,11 +168,6 @@ img.desktop {
   }
   .header .header__block .lang {
     display: block;
-    font-family: "Hind Siliguri", sans-serif;
-    font-weight: 400;
-    font-size: 2.344vw;
-    line-height: 3.776vw;
-    width: 8.724vw;
     padding-left: 1.172vw;
     padding-right: 1.042vw;
     margin-top: 3.516vw;
@@ -194,7 +181,9 @@ img.desktop {
     padding-right: 1.042vw;
     gap: -0.651vw;
     left: -1.172vw;
-    border-radius: 1.302vw;
+  }
+  .header .header__block .lang .lang__options .lang-select {
+    width: 1.432vw;
   }
   /*   MAIN SECTION   */
   .main .main-block {

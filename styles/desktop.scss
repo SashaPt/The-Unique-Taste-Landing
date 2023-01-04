@@ -7,18 +7,21 @@
   box-sizing: border-box;
   font-style: normal;
 }
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
 body {
   width: 100vw;
   overflow-x: hidden;
+  background-color: $color_olive;
+  color: $color_white;
 }
 .container {
   max-width: 71.146vw;
   margin: 0 auto;
 }
-body {
-  background-color: $color_olive;
-  color: $color_white;
-}
+
 ul {
   list-style: none;
 }
@@ -30,7 +33,6 @@ section {
   width: 100vw;
   padding-bottom: 8.854vw;
   margin: 0 auto;
-  
 }
 h2 {
   @include section-title(4.688vw, 4.688vw);
@@ -42,7 +44,28 @@ h2 {
     width: 9.688vw;
     height: 2.5vw;
   }
-
+}
+.lang {
+  @include menu-text(0.938vw, 1.51vw);
+  @include lang (3.49vw, 1.406vw);
+  .lang__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .lang__options {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: $color_white;
+    color: $color_olive;
+    .lang__option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
 }
 .average, .mobile {
   display: none;
@@ -92,23 +115,10 @@ h2 {
       }
     }
     .lang {
-      @include menu-text(0.938vw, 1.51vw);
-      align-self: flex-start;
-      width: 3.49vw;
       padding-left: 0.469vw;
       padding-right: 0.417vw;
       margin-top: 1.406vw;
-      position: relative;
-      transition: 0.3s ease-out;
-      &:hover {
-        background-color: rgba($color: $color_white, $alpha: 0.2);
-        border-radius: 1.406vw;
-      }
       .lang__block {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
         .lang-select {
           width: 0.573vw;
         }
@@ -117,19 +127,11 @@ h2 {
         width: 3.49vw;
         padding-left: 0.469vw;
         padding-right: 0.417vw;
-        display: flex;
-        flex-direction: column;
         gap: -0.26vw;
-        position: relative;
         left: -0.469vw;
-        background-color: $color_white;
-        color: $color_olive;
         border-radius: 0.521vw;
-        .lang__option {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          cursor: pointer;
+        .lang-select {
+          width: 0.573vw;
         }
       }
       .hidden {

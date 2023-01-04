@@ -1,6 +1,6 @@
 @media screen and (max-width: 375px) {
-  body {
-    width: 100vw;
+  body,
+html {
     overflow-x: hidden;
   }
   .container {
@@ -8,7 +8,6 @@
   }
   section {
     padding-bottom: 18.667vw;
-    overflow-x: hidden;
   }
   .button {
     height: 16vw;
@@ -35,14 +34,28 @@
     width: 38.933vw;
     height: 10.133vw;
   }
+  .lang {
+    font-family: "Hind Siliguri", sans-serif;
+    font-weight: 400;
+    font-size: 4.8vw;
+    line-height: 7.733vw;
+    width: 17.867vw;
+    align-self: flex-start;
+    position: relative;
+    transition: 0.3s ease-out;
+  }
+  .lang:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 7.2vw;
+  }
   br.mobile {
     display: inline;
   }
-  h3.mobile, img.mobile {
+  h3.mobile,
+img.mobile {
     display: block;
   }
-  br.average,
-h3.average, img.average {
+  .average {
     display: none;
   }
   /*   HEADER   */
@@ -65,27 +78,7 @@ h3.average, img.average {
     padding: 5.867vw 4vw 0;
   }
   .header .header__block .header__nav-bar .lang {
-    font-family: "Hind Siliguri", sans-serif;
-    font-weight: 400;
-    font-size: 4.8vw;
-    line-height: 7.733vw;
-    width: 17.867vw;
-    padding-left: 2.4vw;
-    padding-right: 2.133vw;
-  }
-  .header .header__block .header__nav-bar .lang:hover {
-    border-radius: 7.2vw;
-  }
-  .header .header__block .header__nav-bar .lang .lang__block .lang-select {
-    width: 2.933vw;
-  }
-  .header .header__block .header__nav-bar .lang .lang__options {
-    width: 17.867vw;
-    padding-left: 2.4vw;
-    padding-right: 2.133vw;
-    gap: -1.333vw;
-    left: -2.4vw;
-    border-radius: 2.667vw;
+    margin-top: 0;
   }
   .header .header__block .header__nav-bar .header__menu {
     font-family: "Hind Siliguri", sans-serif;
@@ -126,7 +119,7 @@ h3.average, img.average {
     font-family: "Hind Siliguri", sans-serif;
     font-weight: 400;
     font-size: 4.8vw;
-    line-height: 7.733vw;
+    line-height: 7.2vw;
     width: 17.867vw;
     padding-left: 2.4vw;
     padding-right: 2.133vw;
@@ -142,6 +135,9 @@ h3.average, img.average {
     gap: -1.333vw;
     left: -2.4vw;
     border-radius: 2.667vw;
+  }
+  .header .header__block .lang .lang__options .lang-select {
+    width: 2.933vw;
   }
   /*   MAIN SECTION   */
   .main .top-shadow {

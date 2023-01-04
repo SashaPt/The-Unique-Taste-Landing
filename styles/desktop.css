@@ -5,19 +5,21 @@
   font-style: normal;
 }
 
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   width: 100vw;
   overflow-x: hidden;
+  background-color: #969879;
+  color: #ffffff;
 }
 
 .container {
   max-width: 71.146vw;
   margin: 0 auto;
-}
-
-body {
-  background-color: #969879;
-  color: #ffffff;
 }
 
 ul {
@@ -67,6 +69,39 @@ h2 {
 .button svg {
   width: 9.688vw;
   height: 2.5vw;
+}
+
+.lang {
+  font-family: "Hind Siliguri", sans-serif;
+  font-weight: 400;
+  font-size: 0.938vw;
+  line-height: 1.51vw;
+  width: 3.49vw;
+  align-self: flex-start;
+  position: relative;
+  transition: 0.3s ease-out;
+}
+.lang:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1.406vw;
+}
+.lang .lang__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lang .lang__options {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #ffffff;
+  color: #969879;
+}
+.lang .lang__options .lang__option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
 .average, .mobile {
@@ -122,27 +157,9 @@ h2 {
   vertical-align: middle;
 }
 .header .header__block .lang {
-  font-family: "Hind Siliguri", sans-serif;
-  font-weight: 400;
-  font-size: 0.938vw;
-  line-height: 1.51vw;
-  align-self: flex-start;
-  width: 3.49vw;
   padding-left: 0.469vw;
   padding-right: 0.417vw;
   margin-top: 1.406vw;
-  position: relative;
-  transition: 0.3s ease-out;
-}
-.header .header__block .lang:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 1.406vw;
-}
-.header .header__block .lang .lang__block {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
 }
 .header .header__block .lang .lang__block .lang-select {
   width: 0.573vw;
@@ -151,20 +168,12 @@ h2 {
   width: 3.49vw;
   padding-left: 0.469vw;
   padding-right: 0.417vw;
-  display: flex;
-  flex-direction: column;
   gap: -0.26vw;
-  position: relative;
   left: -0.469vw;
-  background-color: #ffffff;
-  color: #969879;
   border-radius: 0.521vw;
 }
-.header .header__block .lang .lang__options .lang__option {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
+.header .header__block .lang .lang__options .lang-select {
+  width: 0.573vw;
 }
 .header .header__block .lang .hidden {
   transition: 0.3s ease-out;
