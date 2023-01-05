@@ -44,6 +44,8 @@
     rimraf = require('gulp-rimraf'), // плагин для удаления файлов и каталогов
     rename = require('gulp-rename');
 
+  const ghPages = require('gulp-gh-pages');
+
   /* задачи */
 
   // запуск сервера
@@ -93,7 +95,7 @@
   });
 
   // обработка картинок
-gulp.task('img:build', function () {
+  gulp.task('img:build', function () {
     return gulp
       .src(path.src.img) // путь с исходниками картинок
       .pipe(gulp.dest(path.build.img)); // выгрузка готовых файлов
@@ -131,6 +133,9 @@ gulp.task('img:build', function () {
     'default',
     gulp.series('build', gulp.parallel('webserver', 'watch'))
   );
+
+  //deploy
+  gulp.task('deploy', function () {
+    return gulp.src('./dist/**/*').pipe(ghPages());
+  });
 })(require);
-
-
