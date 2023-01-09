@@ -47,11 +47,13 @@ h2 {
 }
 .lang {
   @include menu-text(0.938vw, 1.51vw);
-  @include lang (3.49vw, 1.406vw);
+  @include lang(3.49vw, 1.406vw);
   .lang__block {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease-out;
   }
   .lang__options {
     display: flex;
@@ -59,6 +61,7 @@ h2 {
     position: relative;
     background-color: $color_white;
     color: $color_olive;
+    transition: 0.3s ease-out;
     .lang__option {
       display: flex;
       justify-content: space-between;
@@ -67,7 +70,8 @@ h2 {
     }
   }
 }
-.average, .mobile {
+.average,
+.mobile {
   display: none;
 }
 
@@ -81,6 +85,7 @@ h2 {
   z-index: 100;
   background-color: rgba($color: $color_olive, $alpha: 0.5);
   border-bottom: 0.052vw solid rgba($color: $color_white, $alpha: 0.3);
+  backdrop-filter: blur(0.26vw);
   .header__block {
     height: 4.167vw;
     display: flex;
@@ -100,7 +105,9 @@ h2 {
     .header__menu {
       @include menu(0.938vw, 1.51vw, 2.083vw);
       .menu__item {
+        a {
         transition: 0.3s ease-out;
+        }
         &:hover a {
           color: $color_signal-red;
         }
@@ -121,6 +128,7 @@ h2 {
       .lang__block {
         .lang-select {
           width: 0.573vw;
+          transition: 0.3s ease-out;
         }
       }
       .lang__options {
@@ -132,10 +140,10 @@ h2 {
         border-radius: 0.521vw;
         .lang-select {
           width: 0.573vw;
+          transition: 0.3s ease-out;
         }
       }
       .hidden {
-        transition: 0.3s ease-out;
         display: none;
       }
     }
@@ -227,6 +235,12 @@ h2 {
     top: 0;
     right: 0;
     background-color: $color_red;
+    .main__picture-wrapper {
+      width: 100%;
+      height: 100%;
+      border-radius: 0 0 1.563vw 1.563vw;
+      overflow: hidden;
+    }
     .main__picture-background {
       width: 34.948vw;
       mix-blend-mode: darken;
@@ -291,8 +305,8 @@ h2 {
       position: relative;
       transition: 0.35s ease-out;
       &:hover {
-        top: -1.042vw;
         mix-blend-mode: hard-light;
+        transform: translateY(-1.042vw);
       }
       &:hover .card-item__img {
         filter: grayscale(0%);
@@ -386,15 +400,15 @@ h2 {
   padding-top: 0;
   .container {
     max-width: 100vw;
-    background-color: $color_button-black;
   }
   .about-project__container {
     padding: 0.208vw 14.479vw 0 15.833vw;
     height: 50.521vw;
+    background-color: $color_button-black;
     background-image: url('../media/img/galaxy-background.png');
     background-position: center;
     background-size: cover;
-    mix-blend-mode: hard-light;
+    background-blend-mode: hard-light;
     display: flex;
     justify-content: space-between;
   }
@@ -421,35 +435,37 @@ h2 {
         width: 14.583vw;
         height: 14.583vw;
         border-radius: 50%;
-        background-image: url('../media/img/full-moon.png');
-        background-size: cover;
         position: absolute;
         top: -6.354vw;
         left: 8.125vw;
-        filter: drop-shadow(0vw 0vw 2.083vw rgba(227, 228, 147, 0.25));
-        mix-blend-mode: normal;
         animation: 30s resizeMoon linear infinite;
         overflow: hidden;
         @keyframes resizeMoon {
           0% {
-            width: 14.583vw;
-            height: 14.583vw;
-            top: -6.354vw;
+            transform: scale(1) rotate(0deg);
           }
-          30% {
-            width: 6.185vw;
-            height: 6.185vw;
-            top: -1.953vw;
+          32% {
+            transform: scale(0.42) rotate(-115deg);
           }
           70% {
-            width: 10.865vw;
-            height: 10.865vw;
-            top: -4.333vw;
+            transform: scale(0.75) rotate(-252deg);
           }
           100% {
-            width: 14.583vw;
-            height: 14.583vw;
-            top: -6.354vw;
+            transform: scale(1) rotate(-360deg);
+          }
+        }
+        img {
+          width: 100%;
+          position: relative;
+          z-index: -150;
+          animation: 30s moveMoon reverse linear infinite;
+          @keyframes moveMoon {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
           }
         }
       }
@@ -459,35 +475,29 @@ h2 {
         border-radius: 50%;
         background-color: $color_eclipse;
         filter: blur(0.052vw);
+        box-shadow: 0 0 1.302vw 1.146vw $color_eclipse;
+        opacity: 0.95;
         position: absolute;
-        top: 14.583vw;
-        left: 0.203vw;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
         z-index: -100;
         animation: 30s resizeEclipse linear infinite;
         @keyframes resizeEclipse {
           0% {
-            width: 14.178vw;
-            height: 14.178vw;
-            top: 14.583vw;
-            left: 0.203vw;
+            transform: translate(-100%,50%);
           }
-          32% {
-            width: 6.014vw;
-            height: 6.014vw;
-            top: 0.926vw;
-            left: 1.795vw;
+          25% {
+            transform: translate(-50%,0);
           }
-          70% {
-            width: 10.563vw;
-            height: 10.563vw;
-            top: -3.66vw;
-            left: 5.443vw;
+          50% {
+            transform: translate(-50%,50%);
+          }
+          75% {
+            transform: translate(-50%,0);
           }
           100% {
-            width: 14.178vw;
-            height: 14.178vw;
-            top: 14.583vw;
-            left: 0.203vw;
+            transform: translate(-100%,50%);
           }
         }
       }
@@ -495,7 +505,9 @@ h2 {
     .about-project__statue-img {
       width: 23.906vw;
       margin-left: 3.073vw;
-      filter: drop-shadow(0vw 0.208vw 2.604vw rgba($color: $color_black, $alpha: 0.3));
+      filter: drop-shadow(
+        0vw 0.208vw 2.604vw rgba($color: $color_black, $alpha: 0.3)
+      );
     }
   }
   .about-project__block {
@@ -888,6 +900,9 @@ h2 {
       @include menu(1.146vw, 1.875vw, 4.479vw);
       margin-right: 0.532vw;
       .menu__item {
+        a {
+          transition: 0.3s ease-out;
+        }
         &:hover a {
           color: $color_signal-red;
         }

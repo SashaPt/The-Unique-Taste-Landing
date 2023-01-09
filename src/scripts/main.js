@@ -59,7 +59,9 @@ const selectLang = (event) => {
 };
 
 const toggleMenu = () => {
-  menu.classList.toggle('desktop');
+  menu.classList.toggle('hidden');
+  menu
+    .querySelector('nav').classList.toggle('scale-width');
 };
 
 const openPicture = (collection) => {

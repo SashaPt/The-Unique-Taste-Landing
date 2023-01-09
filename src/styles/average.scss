@@ -35,10 +35,12 @@
     display: inline;
   }
   
+  
 
   /*   HEADER   */
   .header {
     width: 100vw;
+    backdrop-filter: blur(0.651vw);
     .header__block {
       height: 10.417vw;
       .burger {
@@ -51,6 +53,7 @@
       }
       .header__nav-wrapper {
         position: fixed;
+        height: 100vh;
         top: 0;
         left: 0;
         bottom: 0;
@@ -60,6 +63,10 @@
         z-index: 110;
         transition: 0.3s ease-out;
       }
+      .hidden {
+        opacity: 0;
+        z-index: -1000;
+        }
       .header__nav-bar {
         display: block;
         padding: 0 3.906vw;
@@ -70,6 +77,8 @@
         right: 0;
         top: 0;
         bottom: 0;
+        z-index: 120;
+        transition: 0.3s ease-out;
         .nav-bar__shadow {
           display: block;
           width: 100%;
@@ -85,6 +94,7 @@
           z-index: -1;
         }
         .nav-bar__backgroung {
+          width: 39.193vw;
           display: block;
           position: absolute;
           top: 89.974vw;
@@ -121,6 +131,9 @@
             left: -3.776vw;
           }
         }
+      }
+      .scale-width {
+        transform: translateX(-100%);
       }
       .header__logo {
         width: 21.219vw;
@@ -207,6 +220,9 @@
       height: 97.005vw;
       right: -19.531vw;
       border-radius: 0 0 3.906vw 3.906vw;
+      .main__picture-wrapper {
+        border-radius: 0 0 3.906vw 3.906vw;
+      }
       .main__picture-background {
         width: 87.37vw;
       }
@@ -239,7 +255,8 @@
         border: 0.26vw solid rgba($color: $color_black, $alpha: 0.24);
       border-radius: 3.255vw;
       &:hover {
-        top: -2.604vw;
+        mix-blend-mode: normal;
+        transform: translateY(-2.604vw);
       }
         .card-item__img {
           filter: grayscale(0%);
@@ -313,60 +330,11 @@
           height: 27.344vw;
           top: -14.811vw;
           left: 15.299vw;
-          @keyframes resizeMoon {
-            0% {
-              width: 27.344vw;
-              height: 27.344vw;
-              top: -14.811vw;
-            }
-            30% {
-              width: 11.598vw;
-              height: 11.598vw;
-              top: -6.283vw;
-            }
-            70% {
-              width: 20.372vw;
-              height: 20.372vw;
-              top: -8.641vw;
-            }
-            100% {
-              width: 27.344vw;
-              height: 27.344vw;
-              top: -14.811vw;
-            }
-          }
         }
         .about-project__eclipse {
           width: 26.585vw;
           height: 26.585vw;
-          top: 27.344vw;
-          left: 0.38vw;
-          @keyframes resizeEclipse {
-            0% {
-              width: 26.585vw;
-              height: 26.585vw;
-              top: 27.344vw;
-              left: 0.38vw;
-            }
-            32% {
-              width: 11.276vw;
-              height: 11.276vw;
-              left: 3.366vw;
-              top: 1.736vw;
-            }
-            70% {
-              width: 19.806vw;
-              height: 19.806vw;
-              top: -6.863vw;
-              left: 10.206vw;
-            }
-            100% {
-              width: 26.585vw;
-              height: 26.585vw;
-              top: 27.344vw;
-              left: 0.38vw;
-            }
-          }
+          box-shadow: 0 0 3.255vw 2.865vw $color_eclipse;
         }
       }
     }

@@ -46,6 +46,7 @@
   }
   svg {
     fill: $add-color;
+    transition: 0.3s ease-out;
   }
   &:hover svg {
     fill: $main-color;

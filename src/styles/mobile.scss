@@ -30,12 +30,13 @@
   img.mobile {
     display: block;
   }
-  .average {
+  br.average, .average {
     display: none;
   }
 
   /*   HEADER   */
   .header {
+    backdrop-filter: blur(1.333vw);
     .header__block {
       height: 18.4vw;
       .burger {
@@ -159,6 +160,10 @@
       width: 100vw;
       height: 128.533vw;
       right: -4vw;
+      border-radius: 0vw 0vw 8vw 8vw; 
+      .main__picture-wrapper {
+        border-radius: 0vw 0vw 8vw 8vw; 
+      }
       .main__picture-background {
         width: 100vw;
       }
@@ -188,6 +193,9 @@
         width: 92vw;
         height: 93.333vw;
         border-radius: 6.667vw;
+        &:hover {
+          transform: translateY(-4vw);
+        }
         .card-item__block {
           height: 46.667vw;
           .card-item__header {
@@ -248,60 +256,11 @@
           height: 42vw;
           top: -23.2vw;
           left: 22.933vw;
-          @keyframes resizeMoon {
-            0% {
-              width: 42vw;
-              height: 42vw;
-              top: -22.749vw;
-            }
-            30% {
-              width: 17.813vw;
-              height: 17.813vw;
-              top: -9.651vw;
-            }
-            70% {
-              width: 31.293vw;
-              height: 31.293vw;
-              top: -13.272vw;
-            }
-            100% {
-              width: 42vw;
-              height: 42vw;
-              top: -22.749vw;
-            }
-          }
         }
         .about-project__eclipse {
           width: 40.832vw;
           height: 40.832vw;
-          top: 42vw;
-          left: 0.584vw;
-          @keyframes resizeEclipse {
-            0% {
-              width: 40.832vw;
-              height: 40.832vw;
-              top: 42vw;
-              left: 0.584vw;
-            }
-            32% {
-              width: 17.32vw;
-              height: 17.32vw;
-              left: 5.171vw;
-              top: 2.667vw;
-            }
-            70% {
-              width: 30.421vw;
-              height: 30.421vw;
-              top: -10.541vw;
-              left: 15.6vw;
-            }
-            100% {
-              width: 40.832vw;
-              height: 40.832vw;
-              top: 42vw;
-              left: 0.584vw;
-            }
-          }
+          box-shadow: 0 0 6.667vw 5.867vw $color_eclipse;
         }
       }
     }
