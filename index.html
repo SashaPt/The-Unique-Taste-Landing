@@ -20,8 +20,8 @@
           <div class="burger">
             <img src="media/img/burger.svg" alt="burger" class="burger-img" />
           </div>
-          <div class="header__nav-wrapper desktop">
-            <nav class="header__nav-bar">
+          <div class="header__nav-wrapper hidden">
+            <nav class="header__nav-bar scale-width">
               <div class="nav-bar__shadow"></div>
               <img
                 src="media/img/nav-bar-bg.svg"
@@ -360,21 +360,23 @@
           </p>
         </div>
         <div class="main__picture">
-          <img
-            src="media/img/woman-background-mob.png"
-            alt="woman-background"
-            class="main__picture-background mobile"
-          />
-          <img
-            src="media/img/woman-background.png"
-            alt="woman-background"
-            class="main__picture-background average"
-          />
-          <img
-            src="media/img/woman-background.png"
-            alt="woman-background"
-            class="main__picture-background desktop"
-          />
+          <div class="main__picture-wrapper">
+            <img
+              src="media/img/woman-background-mob.png"
+              alt="woman-background"
+              class="main__picture-background mobile"
+            />
+            <img
+              src="media/img/woman-background-average.png"
+              alt="woman-background"
+              class="main__picture-background average"
+            />
+            <img
+              src="media/img/woman-background.png"
+              alt="woman-background"
+              class="main__picture-background desktop"
+            />
+          </div>
           <img
             src="media/img/woman-mobile.png"
             alt="woman"
@@ -869,6 +871,7 @@
           <div class="about-project__picture">
             <div class="about-project__background">
               <div class="about-project__moon-img">
+                <img src="media/img/full-moon.png" alt="moon">
                 <div class="about-project__eclipse"></div>
               </div>
             </div>
@@ -946,7 +949,7 @@
             </div>
             <div class="feature__text">
               Советы диетолога и астролога по питанию
-              <br class="desktop average" />и психологическому комфорту
+              <br class="desktop" /><br class="average" />и психологическому комфорту
             </div>
           </div>
           <div class="mobile-app__feature-item feature">
@@ -982,7 +985,7 @@
               />
             </div>
             <div class="feature__text">
-              Личный прогноз <br class="desktop average" />на каждый день
+              Личный прогноз <br class="desktop" /><br class="average" />на каждый день
             </div>
           </div>
           <div class="mobile-app__feature-item feature">
@@ -994,7 +997,7 @@
               />
             </div>
             <div class="feature__text">
-              Бесплатная расшифровка <br class="desktop average" />по дате
+              Бесплатная расшифровка <br class="desktop" /><br class="average" />по дате
               рождения
             </div>
           </div>
@@ -1283,9 +1286,11 @@
           </p>
           <p class="about-author__text">
             Перед запуском были изучены более 100 человек на<br
-              class="desktop average"
+              class="desktop"
             />
-            тему <strong>отношения к еде</strong> и психологического комфорта.
+            тему <br
+            class="average"
+          /><strong>отношения к еде</strong> и психологического комфорта.
           </p>
           <p class="about-author__text">
             С каждой консультацией я понимаю, насколько человеческая
@@ -1391,7 +1396,8 @@
     <section id="consultations" class="consultations">
       <div class="container">
         <h2 class="consultations__header">Online Консультации</h2>
-        <h3 class="consultations__subheader desktop average">Что вас ждет:</h3>
+        <h3 class="consultations__subheader desktop">Что вас ждет:</h3>
+        <h3 class="consultations__subheader average">Что вас ждет:</h3>
         <h3 class="consultations__subheader mobile">
           Консультация даст возможность понять себя и свою жизнь изнутри,
           узнать, в чём твоя сила
