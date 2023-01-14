@@ -1,3 +1,5 @@
+
+
 (function (require) {
   'use strict';
   const path = {
@@ -41,6 +43,9 @@
     cleanCSS = require('gulp-clean-css'), // плагин для минимизации CSS
     uglify = require('gulp-uglify'), // модуль для минимизации JavaScript
     cache = require('gulp-cache'), // модуль для кэширования
+    imagemin = require('gulp-imagemin'),
+    jpegrecompress = require('imagemin-jpeg-recompress'), // плагин для сжатия jpeg
+    pngquant = require('imagemin-pngquant'), // плагин для сжатия png
     rimraf = require('gulp-rimraf'), // плагин для удаления файлов и каталогов
     rename = require('gulp-rename');
 
@@ -98,6 +103,21 @@
   gulp.task('img:build', function () {
     return gulp
       .src(path.src.img) // путь с исходниками картинок
+      .pipe(
+        cache(
+          imagemin([
+            // сжатие изображений
+            imagemin.gifsicle({ interlaced: true }),
+            jpegrecompress({
+              progressive: true,
+              max: 90,
+              min: 80,
+            }),
+            pngquant(),
+            imagemin.svgo({ plugins: [{ removeViewBox: false }] }),
+          ])
+        )
+      )
       .pipe(gulp.dest(path.build.img)); // выгрузка готовых файлов
   });
 

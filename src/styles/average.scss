@@ -61,16 +61,17 @@
         background: rgba($color: $color_black, $alpha: 0.6);
         backdrop-filter: blur(0.26vw);
         z-index: 110;
-        transition: 0.3s ease-out;
+        transition: transform 0.3s ease-out;
       }
       .hidden {
-        opacity: 0;
+        width: 0;
         z-index: -1000;
         }
       .header__nav-bar {
         display: block;
         padding: 0 3.906vw;
         width: 53.776vw;
+        height: 100vh;
         background-color: $color_olive;
         position: fixed;
         left: 0;
@@ -406,7 +407,7 @@
       }
     }
     .mobile-app__picture {
-      top: 22.635vw;
+      bottom: 0;
       right: -3.906vw;
       .mobile-app__mobile-img {
         width: 65.755vw;
