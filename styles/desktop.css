@@ -180,6 +180,9 @@ h2 {
   left: -0.469vw;
   border-radius: 0.521vw;
 }
+.header .header__block .lang .lang__options a {
+  color: #969879;
+}
 .header .header__block .lang .lang__options .lang-select {
   width: 0.573vw;
   transition: 0.3s ease-out;
@@ -475,7 +478,8 @@ h2 {
   background-size: cover;
   background-blend-mode: hard-light;
   display: flex;
-  justify-content: space-between;
+  -moz-column-gap: 7.708vw;
+       column-gap: 7.708vw;
 }
 .about-project .about-project__picture {
   position: relative;
@@ -682,7 +686,7 @@ h2 {
 }
 .mobile-app .mobile-app__picture {
   position: absolute;
-  top: -2.131vw;
+  bottom: -4.688vw;
   right: -9.891vw;
   z-index: -1;
 }
